@@ -65,3 +65,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidance.
 ## License
 
 MIT.
+
+## Live testnet smoke check
+
+Use `node --test integration/testnet.smoke.mjs` to perform a **read-only** health/network/ledger/event-query check against Stellar Testnet. This requires internet access and may fail during provider outages; it is intentionally excluded from deterministic unit tests. The `Live Stellar Testnet RPC Smoke` GitHub Action runs on a weekly schedule or manually via workflow dispatch. It does not deploy contracts, sign transactions, or require keys. The example contract ID is drawn from Stellar's published `getEvents` documentation; receiving zero events is valid.
