@@ -1,0 +1,12 @@
+{
+  "name": "@stellar-devguard/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Dependency-free Stellar RPC diagnostic CLI and reusable client",
+  "bin": {"devguard": "./src/cli.js"},
+  "exports": {".": "./src/index.js"},
+  "engines": {"node": ">=20"},
+  "scripts": {"test": "node --test", "check": "node --check src/index.js && node --check src/cli.js", "start": "node src/cli.js"},
+  "license": "MIT"
+}
